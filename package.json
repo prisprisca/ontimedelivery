@@ -5,10 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js"
-    
+    "start": "nodemon index.js"  
   },
-  "engines": { "node": "14.15.1"},
+  "engines": { "node": "14.15.1"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
