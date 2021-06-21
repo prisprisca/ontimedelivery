@@ -2,7 +2,7 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
 import User from '../models/user.js';
-import user from '../models/user.js';
+// import user from '../models/user.js';
 
 export const signin = async (req, res) => {
    const { email, password} = req.body;
@@ -24,7 +24,7 @@ export const signup = async (req, res) => {
     const { email, password, confirmPassword, firstName, lastName} = req.body;
 
     try {
-        const existingUser = await user.findOne({ email});
+        const existingUser = await User.findOne({ email});
         if(existingUser) return res.status(400).json({ message: "User already exist."});
         if(password !== confirmPassword) return res.status(400).json({ message: "Passwords dont match"});
         const hashedPassword = await bcrypt.hash(password, 12);
