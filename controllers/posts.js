@@ -17,7 +17,7 @@ export const getOrders = async(req,res) =>{
 export const makeOrder = async(req, res)=> {
     const order = req.body;
 
-    const newOrder = new MakeOrder(order);
+    const newOrder = new MakeOrder({ ...order, creator: req.userId, createdAt: new Date().toISOString()});
 
     try {
         await newOrder.save();
