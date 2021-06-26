@@ -7,10 +7,10 @@ const orderSchema = mongoose.Schema({
     creator: String,
     tags: [String],
     selectedFile: String,
-    likeCount: {
-        type: Number,
-        default: 0
-    },
+    // likeCount: {
+    //     type: Number,
+    //     default: 0
+    // },
     createdAt: {
         type: Date,
         default: new Date()
