@@ -18,7 +18,7 @@ app.use('/parcels', postRoutes);
 app.use('/user', userRoutes)
 
 app.get('/', (req, res) =>{
-   res.send('hello');
+   res.send('Hello Welcome to On-Time-Delivery-API');
 })
 
 
