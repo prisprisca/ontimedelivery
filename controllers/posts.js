@@ -45,10 +45,11 @@ export const deleteOrder = async (req, res) => {
     res.json({message: 'Order deleted successfully'});
 }
 
-export const likeOrder = async (req, res) => {
-    const {id} = req.params;
-    if(!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send('No order with that id');
-    const order = await MakeOrder.findById(id);
-    const updatedOrder = await MakeOrder.findByIdAndUpdate(id, { likeCount: order.likeCount + 1}, { new: true});
-     res.json(updatedOrder);
-}
+
+// export const likeOrder = async (req, res) => {
+//     const {id} = req.params;
+//     if(!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send('No order with that id');
+//     const order = await MakeOrder.findById(id);
+//     const updatedOrder = await MakeOrder.findByIdAndUpdate(id, { likeCount: order.likeCount + 1}, { new: true});
+//      res.json(updatedOrder);
+// }
