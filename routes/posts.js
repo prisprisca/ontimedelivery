@@ -6,10 +6,10 @@ import auth from '../middleware/auth.js';
 const router = express.Router();
 
 router.get('/',getOrders ); 
-router.post('/', auth, makeOrder ); 
-router.patch('/:id', auth, updateOrder);
-router.delete('/:id', auth, deleteOrder);
-// router.patch('/:id/likeOrder',  likeOrder);
+router.post('/',auth, makeOrder ); 
+router.patch('/:id',auth, updateOrder);
+router.delete('/:id',auth, deleteOrder);
+
 
 export default router
 
