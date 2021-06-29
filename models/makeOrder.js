@@ -6,12 +6,17 @@ const orderSchema = mongoose.Schema({
     name: String,
     creator: String,
     tags: [String],
+    selectedFile: String,
+    // likeCount: {
+    //     type: Number,
+    //     default: 0
+    // },
     createdAt: {
         type: Date,
         default: new Date()
     },
 })
 
-var MakeOrder = mongoose.model('MakeOrder', orderSchema);
+const MakeOrder = mongoose.model('PostMessage', orderSchema);
 
 export default MakeOrder;
